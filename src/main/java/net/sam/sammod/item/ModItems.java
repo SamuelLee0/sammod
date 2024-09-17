@@ -10,6 +10,7 @@ import net.sam.sammod.SamMod;
 
 public class ModItems {
     public static final Item MINECRAFT_BUCKS = registerItem("minecraft_bucks", new Item(new Item.Settings()));
+    public static final Item PHOTOSHOP = registerItem("photoshop", new Item(new Item.Settings()));
 
 
     private static Item registerItem(String name, Item item) {
@@ -21,6 +22,7 @@ public class ModItems {
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
             entries.add(MINECRAFT_BUCKS);
+            entries.add(PHOTOSHOP);
         });
     }
 }
